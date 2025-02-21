@@ -1,0 +1,28 @@
+---
+import FormInput from "./FormInput.astro";
+---
+
+<form
+    action=""
+    class="flex flex-col mt-14 items-center justify-center gap-y-10"
+>
+    <FormInput name="Ingresa tu Nombre" />
+    <FormInput name="Numero de telefono" />
+    <FormInput name="Fecha de la Serenata" icon="true/" />
+    <textarea
+        class="border-b-2 border-black font-light text-[20px] text-gray-500 xl:min-w-[90vh]  lg:min-w-[50vh] md:min-w-[35vh] min-w-[36vh]"
+        placeholder="Comentario"
+        >Comentario
+    </textarea>
+    <button
+        class="group relative h-12 mb-10 overflow-hidden bg-[#D5A353] overflow-x-hidden mt-5 rounded-md cursor-pointer px-8 py-2 text-neutral-50"
+    >
+        <span class="relative z-10">Enviar Mensaje </span>
+        <span class="absolute inset-0 overflow-hidden rounded-md">
+            <span
+                class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-gray-400 transition-all duration-700 group-hover:-translate-x-0 group-hover:scale-150"
+            >
+            </span>
+        </span>
+    </button>
+</form>

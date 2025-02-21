@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import CardStaff from "../components/CardStaff.astro";
+import Carousel from "../components/Carousel.astro";
+import Contact from "../components/Contact.astro";
+import FormContent from "../components/FormContent.astro";
+import Haircut from "../components/Haircut.astro";
+import Header from "../components/Header.astro";
+import Service from "../components/Service.astro";
+import Staff from "../components/Staff.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Vector from "../components/icons/Vector.astro";
+import { CardService } from "../js/CardService";
+import { Containerinfo } from "../js/ContainerInfo.js";
+import { staff } from "../js/staff";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main
+		class="flex flex-col items-center relative overflow-hidden justify-center w-full"
+	>
+		<Header />
+		<Service />
+		<Haircut />
+		<Testimonials />
+		<Staff />
+		<Contact />
+		<footer
+			class="w-full bg-black text-white py-5 flex items-center justify-center"
+		>
+			Powered by Monbu: Web Armando Bogotá 2025
+		</footer>
+		<button
+			onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+			class="fixed bottom-[10%] right-[7%] z-20 cursor-pointer py-5 px-5 bg-[#CD9D50] drop-shadow-md border-5 border-black rounded-full"
+		>
+			<Image
+				src="/icons/oi--caret-top.svg"
+				class="size-5"
+				alt=""
+				height={5}
+				width={5}
+			/>
+		</button>
+	</main>
+</Layout>

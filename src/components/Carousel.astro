@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import { testimonials } from "../js/testimonials";
+---
+
+<swiper-container
+    class="mySwiper mt-10 md:px-20 px-10 md:min-w-0 max-w-[130vh]"
+    style="--swiper-pagination-color: white;"
+    pagination="true"
+    pagination-clickable="true"
+    keyboard="true"
+    space-between="30"
+    slides-per-view="1"
+    free-mode="true"
+
+>
+    {
+        testimonials.map((item: any) => (
+            <swiper-slide class=" relative rounded-lg text-center flex items-center justify-center flex-col">
+                <div class="absolute top-0 left-0 md:flex hidden">
+                    <Image
+                        src="/vector/in.png"
+                        class="rounded-lg"
+                        alt="Imagen 1"
+                        height={500}
+                        width={500}
+                    />
+                </div>
+                <div class="absolute top-0 right-0 rotate-180 md:flex hidden">
+                    <Image
+                        src="/vector/in.png"
+                        class="rounded-lg"
+                        alt="Imagen 1"
+                        height={500}
+                        width={500}
+                    />
+                </div>
+
+                <p class="text-white font-light text-[20px] max-w-[60vh]">
+                    {item.desc}
+                </p>
+                <h3 class="mt-10 text-[#D5A353] text-[20px] font-extrabold">
+                    {item.name}
+                </h3>
+                <span class="text-md font-light text-white">{item.carge}</span>
+                <div class="swiper-pagination"></div>
+            </swiper-slide>
+        ))
+    }
+</swiper-container>
+
+
+<style>
+    swiper-container {
+        width: 100%;
+        height: 50vh;
+    }
+
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section
+	id="service"
+	class="relative w-full lg:min-h-[140vh] md:min-h-[180vh] min-h-[120vh] flex flex-col items-center justify-center"
+>
+	<div
+		data-aos="zoom-in-down"
+		class="flex xl:flex-row flex-col items-start justify-between mt-40 w-full gap-y-10 gap-x-10 max-w-[180vh]"
+	>
+		<div
+			class="w-full leading-[70px] md:px-2 px-10 flex flex-col lg:items-start items-center lg:justify-start justify-center lg:text-start text-center"
+		>
+			<h4 class="md:text-[60px] text-[45px] font-bold min-w-[60vh]">
+				YOUR PERSONAL <h3
+					class="text-[#D5A353] md:text-[60px] text-[45px] font-bold"
+				>
+					BARBER SERVICE
+				</h3>
+				<h3 class="md:text-[60px] text-[45px] font-bold">
+					AT YOUR HOME
+				</h3>
+			</h4>
+			<p
+				class="max-w-[60vh] leading-[50px] mt-5 text-gray-600 font-light text-[25px]"
+			>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Vestibulum sed arcu id diam faucibus lacinia id pharetra
+				ante.Nulla eget lectus vitae mauris luctus.
+			</p>
+		</div>
+		<Image
+			height={200}
+			width={200}
+			src="/image/rerk.svg"
+			alt=""
+			class="object-cover min-w-[90vh] max-h-[80vh] rounded-lg drop-shadow-md"
+		/>
+	</div>
+	<Image
+		data-aos="fade-down-right"
+		class="absolute size-120 xl:flex hidden object-contain -bottom-[35%] -left-[10%] z-20"
+		src="/image/6932273_30215-removebg-preview.png"
+		alt=""
+		height={120}
+		width={120}
+	/>
+	<Image
+		data-aos="fade-down-left"
+		class="absolute size-150 xl:flex hidden object-contain -bottom-[36%] -right-[7%] z-20"
+		src="/image/2148741901__1_-removebg-preview 1.png"
+		alt=""
+		height={150}
+		width={150}
+	/>
+</section>

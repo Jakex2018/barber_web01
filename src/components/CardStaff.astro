@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+const { name, image, role } = Astro.props;
+---
+
+<div
+    data-aos="zoom-in-up"
+    class="flex flex-col items-center justify-center overflow-hidden"
+>
+    <Image
+        src={`/image/${image}`}
+        alt=""
+        width={200}
+        height={200}
+        class="object-cover lg:size-80 sm:size-20 md:size-140 size-80 min-h-[40vh] rounded-[20px] drop-shadow-md"
+    />
+
+    <h3 class="font-bold text-[30px] mt-5">
+        {name}
+    </h3>
+    <p class="font-light text-gray-400 text-[20px]">
+        {role}
+    </p>
+    <div class="flex gap-x-7 mt-3 [&>img]:size-7">
+        <Image src="/icons/mdi--instagram.svg" alt="" height={20} width={20} />
+        <Image src="/icons/prime--twitter.svg" alt="" height={20} width={20} />
+    </div>
+</div>

@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import { CardService } from "../js/CardService";
+import Vector from "./icons/Vector.astro";
+---
+
+<section
+	id="haircut"
+	class="w-full xl:min-h-[170vh] md:min-h-[280vh] min-h-[320vh] flex flex-col items-center justify-start bg-[#F2F2F2] z-10"
+>
+	<div
+		class="flex flex-col items-center justify-center md:max-w-[60vh] max-w-[30vh] text-center"
+	>
+		<h3 data-aos="flip-up" class="text-[50px] font-bold text-black mt-20">
+			OUR SERVICES
+		</h3>
+		<p
+			data-aos="flip-up"
+			class="max-w-[70vh] text-center text-gray-800 text-[25px] font-light"
+		>
+			Berger Barbershop is an amazing barbershop located in the heart of
+			Upper West Side of Manhattan, NY
+		</p>
+	</div>
+
+	<div
+		class="flex xl:flex-row flex-col gap-x-12 gap-y-12 items-center justify-center"
+	>
+		{
+			CardService.map((item: any) => (
+				<div data-aos="zoom-in-up" class="flex flex-col items-center ">
+					<div class="flex relative overflow-auto flex-col items-center group translate-y-[23%] justify-center  md:min-w-[50vh] min-w-[40vh] min-h-[60vh] bg-white transition-all duration-1000 ease-in-out   rounded-lg drop-shadow-md">
+						<Vector
+							class="text-[#D5A353] group-hover:text-[#ffffff]"
+							icon={item.icon}
+						/>
+						<h2 class="font-bold text-[25px] mt-2 group-hover:text-[#D5A353] ">
+							HAIRCUTTING
+						</h2>
+						<Image
+							src="/image/hero_image.webp"
+							height={500}
+							width={500}
+							alt=""
+							class="absolute inset-0 h-full opacity-0 group-hover:opacity-100 group-hover:duration-1000 -z-2"
+						/>
+						
+						<p class="text-gray-800 font-light mt-5 lg:text-[23px] text-[15px] md:max-w-[40vh] max-w-[30vh] group-hover:text-white text-center">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Integer cursus congue iaculis.
+						</p>
+						<button class="mt-10 text-[#D5A353] font-bold md:text-lg text-[25px]">
+							Read More
+						</button>
+					</div>
+				</div>
+			))
+		}
+	</div>
+	<button
+		class="px-28 py-4 rounded-lg hover:scale-105 duration-300 cursor-pointer translate-y-[20vh] bg-[#D5A353] text-white font-bold text-xl mt-20"
+	>
+		Ver Más
+	</button>
+</section>

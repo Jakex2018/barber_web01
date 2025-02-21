@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+
+const { name } = Astro.props;
+---
+
+<div class="relative">
+    <input
+        type="text"
+        placeholder={name}
+        class="xl:min-w-[90vh] lg:min-w-[50vh] md:min-w-[35vh]  min-w-[36vh] font-light text-[20px]  border-b-2 border-black p-2"
+    />
+</div>
